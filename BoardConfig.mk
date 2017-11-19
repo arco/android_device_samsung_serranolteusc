@@ -21,35 +21,20 @@
 # definition file).
 #
 
-ifeq ($(RECOVERY_VARIANT),twrp)
-   WITH_TWRP := true
-endif
-
 # Inherit from common serrano
 -include device/samsung/serrano-common/BoardConfigCommon.mk
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := serranolteusc,R890,SCH-R890
 
 # Inherit from proprietary vendor
 -include vendor/samsung/serranolteusc/BoardConfigVendor.mk
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := serranolteusc,R890,SCH-R890
+
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_serrano_usc_defconfig
-
-# NFC
-BOARD_HAVE_NFC := true
 
 # LED
 BOARD_HAVE_MULTI_COLOR_LED := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Custom RIL class
-BOARD_RIL_CLASS := ../../../device/samsung/serranolteusc/ril/
-
-ifeq ($(WITH_TWRP),true)
-   TARGET_RECOVERY_DEVICE_DIRS += device/samsung/serranolteusc
-   TARGET_RECOVERY_FSTAB += device/samsung/serranolteusc/rootdir/twrp.fstab
-endif

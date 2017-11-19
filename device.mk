@@ -14,21 +14,20 @@
 # limitations under the License.
 #
 
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SerranoLTEUSCRIL
-
-# Get non-open-source specific aspects
-# Call this BEFORE serrano-common        
-$(call inherit-product, vendor/samsung/serranolteusc/serranolteusc-vendor.mk)
-
-DEVICE_PACKAGE_OVERLAYS += device/samsung/serranolteusc/overlay
-
 # Inherit from serrano-common
 $(call inherit-product, device/samsung/serrano-common/serrano-common.mk)
 $(call inherit-product, device/samsung/serrano-common/nfc.mk)
+
+# Also get non-open-source specific aspects
+$(call inherit-product, vendor/samsung/serranolteusc/serranolteusc-vendor.mk)
+
+# Device overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/serranolteusc/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
+# Amplifier
+PRODUCT_PACKAGES += \
+    audio_amplifier.msm8960

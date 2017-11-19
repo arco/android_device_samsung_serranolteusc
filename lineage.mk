@@ -27,3 +27,8 @@ PRODUCT_DEVICE := serranolteusc
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := SCH-R890
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=serranolteusc \
+    BUILD_FINGERPRINT="samsung/serranolteusc/serranolteusc:4.4.2/KOT49H/R890TYUBPD2:user/release-keys" \
+    PRIVATE_BUILD_DESC="serranolteusc-user 4.4.2 KOT49H R890TYUBPD2 release-keys"
