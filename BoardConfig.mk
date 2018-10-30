@@ -33,8 +33,5 @@ TARGET_OTA_ASSERT_DEVICE := serranolteusc,R890,SCH-R890
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_serrano_usc_defconfig
 
-# LED
-BOARD_HAVE_MULTI_COLOR_LED := true
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
