@@ -1,7 +1,7 @@
 # system.prop for serranolteusc
 #
 
-rild.libpath=/system/lib/libsec-ril.so
+rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 
 persist.radio.snapshot_enabled=1
 persist.radio.snapshot_timer=22
@@ -13,3 +13,4 @@ ro.config.vc_call_vol_steps=7
 ro.telephony.default_network=8
 ro.telephony.default_cdma_sub=0
 telephony.lteOnCdmaDevice=1
+DEVICE_PROVISIONED=1
