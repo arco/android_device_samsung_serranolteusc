@@ -27,6 +27,9 @@
 # Inherit from proprietary vendor
 -include vendor/samsung/serranolteusc/BoardConfigVendor.mk
 
+# Manifest
+DEVICE_MANIFEST_FILE += device/samsung/serranolteusc/manifest.xml
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := serranolteusc,R890,SCH-R890
 
