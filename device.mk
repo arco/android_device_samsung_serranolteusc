@@ -15,14 +15,14 @@
 #
 
 # Inherit from serrano-common
-$(call inherit-product, device/samsung/serrano-common/serrano-common.mk)
-$(call inherit-product, device/samsung/serrano-common/nfc.mk)
+$(call inherit-product, $(COMMON_PATH)/serrano-common.mk)
+$(call inherit-product, $(COMMON_PATH)/nfc.mk)
 
 # Also get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/serranolteusc/serranolteusc-vendor.mk)
+$(call inherit-product, $(DEVICE_VENDOR_PATH)/serranolteusc-vendor.mk)
 
 # Device overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/serranolteusc/overlay
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
