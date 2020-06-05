@@ -13,5 +13,6 @@ ro.com.android.dataroaming=true
 ro.config.vc_call_vol_steps=7
 ro.telephony.default_network=8
 ro.telephony.default_cdma_sub=1
+ro.telephony.ril.config=legacypollstate
 telephony.lteOnCdmaDevice=1
 DEVICE_PROVISIONED=1
